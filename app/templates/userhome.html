@@ -80,41 +80,51 @@
     </div>
 </header>
 
-
 <!-- Portfolio Section -->
 <div id="portfolio">
   <div class="section-title text-center center">
 
   {% for i in restadmin %}
 
-    <div class="row">
+    <div class="row text-white">
       <div class="portfolio-items">
         <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
           <div class="portfolio-item">
-            <div class="hover-bg"> 
-              <div class="hover-text">
-               <h1>
-                  <form action="/restmenu" method="POST">  Shop-{{ i.rname }}
+            <div> 
+              <div class="hover-text ">
+               
+                  <form action="/indexmenu" method="POST"> <font color="white"> <h1> Shop-{{ i.rname }} </h1> </font>
+
+                    <!--
                     <input type = "text" name = "restid" id="temp{{ i.rid }}" style="visibility: hidden;" />
-                    
+                    <-->
                   <script>
                       var temp='{{ i.rid }}';
                       // document.getElementbyId("temp").name=temp;
                       document.getElementById("temp{{ i.rid }}").value=temp;
                   </script>
                   <button type="submit" class="btn btn-primary text-center" value=”submit”>See Menu</button>
-                  </form>
-                </h1>
-              
+                  </form> 
               </div>
-              <img src="static/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="static/08-small.jpg" class="img-responsive" alt="Project Title"> </a>
+            </div>
           </div>
         </div>
+      </div>
+  
+
   
      {% endfor %}
 
   </div>
-</div>
+ 
+        </div>
+        </div>
+         </div>
+      
+
+
+
 
 <!-- Call Reservation Section -->
 <!-- Contact Section -->
